@@ -1,80 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>One Page E-Commerce</title>
-  <style>
-    body { font-family: sans-serif; margin: 0; }
-    header, footer { background: #222; color: #fff; text-align: center; padding: 1em; }
-    nav { background: #444; text-align: center; padding: 1em; }
-    nav a { color: #fff; margin: 0 1em; text-decoration: none; }
-    section { padding: 2em; max-width: 960px; margin: auto; }
-    .products { display: flex; flex-wrap: wrap; gap: 1em; justify-content: center; }
-    .product { border: 1px solid #ccc; padding: 1em; width: 200px; text-align: center; border-radius: 8px; }
-    .product img { width: 100%; height: auto; border-radius: 6px; }
-    button { background: #007bff; color: #fff; padding: 0.5em 1em; border: none; cursor: pointer; border-radius: 4px; }
-    button:hover { background: #0056b3; }
-  </style>
-  <script data-chat-entry-id="meguY9-lScCuaiSq4VLlSg" data-env="us01" data-apikey="XamhUxocQ5u4EBY_5SCESw" src="https://us01ccistatic.zoom.us/us01cci/web-sdk/chat-client.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern E-Commerce</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-white text-gray-800 font-sans">
 
-<header>
-  <h1>My E-Commerce</h1>
-  <p>Best products in one page</p>
-</header>
+  <!-- Hero Section -->
+  <header class="text-center py-20 bg-gray-100">
+    <h1 class="text-5xl font-semibold">Discover Innovation</h1>
+    <p class="mt-4 text-xl text-gray-600">Modern tech products for your lifestyle</p>
+    <a href="#products" class="mt-6 inline-block bg-black text-white px-6 py-3 rounded hover:bg-gray-800">Shop Now</a>
+  </header>
 
-<nav>
-  <a href="#products">Products</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
-</nav>
+  <!-- Product Section -->
+  <section id="products" class="max-w-6xl mx-auto px-6 py-20">
+    <h2 class="text-3xl font-semibold text-center mb-10">Featured Products</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+      <div class="border rounded-xl shadow hover:shadow-lg transition">
+        <img src="https://picsum.photos/id/1011/600/400" alt="Product A" class="rounded-t-xl">
+        <div class="p-4">
+          <h3 class="text-xl font-medium mb-2">Product A</h3>
+          <p class="text-gray-500 mb-4">$19.99</p>
+          <button onclick="addToCart('Product A')" class="bg-black text-white px-4 py-2 rounded hover:bg-gray-800">Add to Cart</button>
+        </div>
+      </div>
+      <div class="border rounded-xl shadow hover:shadow-lg transition">
+        <img src="https://picsum.photos/id/1015/600/400" alt="Product B" class="rounded-t-xl">
+        <div class="p-4">
+          <h3 class="text-xl font-medium mb-2">Product B</h3>
+          <p class="text-gray-500 mb-4">$29.99</p>
+          <button onclick="addToCart('Product B')" class="bg-black text-white px-4 py-2 rounded hover:bg-gray-800">Add to Cart</button>
+        </div>
+      </div>
+      <div class="border rounded-xl shadow hover:shadow-lg transition">
+        <img src="https://picsum.photos/id/1021/600/400" alt="Product C" class="rounded-t-xl">
+        <div class="p-4">
+          <h3 class="text-xl font-medium mb-2">Product C</h3>
+          <p class="text-gray-500 mb-4">$39.99</p>
+          <button onclick="addToCart('Product C')" class="bg-black text-white px-4 py-2 rounded hover:bg-gray-800">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="products">
-  <h2>Featured Products</h2>
-  <div class="products">
-  <div class="product">
-    <img src="https://picsum.photos/id/1011/200/200" alt="Product A">
-    <h3>Product A</h3>
-    <p>$19.99</p>
-    <button onclick="addToCart('Product A')">Add to Cart</button>
-  </div>
-  <div class="product">
-    <img src="https://picsum.photos/id/1015/200/200" alt="Product B">
-    <h3>Product B</h3>
-    <p>$29.99</p>
-    <button onclick="addToCart('Product B')">Add to Cart</button>
-  </div>
-  <div class="product">
-    <img src="https://picsum.photos/id/1021/200/200" alt="Product C">
-    <h3>Product C</h3>
-    <p>$39.99</p>
-    <button onclick="addToCart('Product C')">Add to Cart</button>
-  </div>
-</div>
-</section>
+  <!-- About Section -->
+  <section class="bg-gray-100 py-20 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-semibold mb-4">Why Choose Us</h2>
+      <p class="text-gray-600">We craft products that blend design and technology, offering a seamless experience like no other. Fast shipping. Trusted support.</p>
+    </div>
+  </section>
 
-<section id="about">
-  <h2>About Us</h2>
-  <p>We are a startup selling high-quality products online. All our items are sourced responsibly and delivered with care.</p>
-</section>
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 px-6">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-3xl font-semibold mb-4">Contact Us</h2>
+      <p class="mb-2">📧 contact@modernstore.com</p>
+      <p>📞 +1 234 567 890</p>
+    </div>
+  </section>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: contact@ecommerce.test</p>
-  <p>Phone: +123 456 7890</p>
-</section>
+  <!-- Footer -->
+  <footer class="bg-black text-white text-center py-6">
+    &copy; 2025 Modern E-Commerce. All rights reserved.
+  </footer>
 
-<footer>
-  &copy; 2025 My E-Commerce. All rights reserved.
-</footer>
-
-<script>
-  function addToCart(product) {
-    alert(`${product} added to cart!`);
-  }
-</script>
-
+  <script>
+    function addToCart(product) {
+      alert(`${product} added to cart!`);
+    }
+  </script>
+  <script data-chat-entry-id="meguY9-lScCuaiSq4VLlSg" data-env="us01" data-apikey="XamhUxocQ5u4EBY_5SCESw" src="https://us01ccistatic.zoom.us/us01cci/web-sdk/chat-client.js"></script>
 </body>
 </html>
